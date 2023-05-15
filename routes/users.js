@@ -15,7 +15,7 @@ router.put("/:id", async(req,res)=>{
         try{
             const updatesUser = await User.findByIdAndUpdate(req.params.id,{
                 $set: req.body,
-            });
+            },{new:true});
             res.status(200).json(updatesUser);
 
         } catch(e){
