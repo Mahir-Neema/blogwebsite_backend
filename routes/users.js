@@ -48,9 +48,18 @@ router.delete("/:id", async(req,res)=>{
     else{
         res.status(401).json("You can delete only your account");
     }
-    
 });
 
+// get user
+router.get("/:id", async (req,res) => {
+    try{
+        const user = await User.findById(req.params.id);
+        const {password, ...others} = user._doc;
+        res.status(200).json(others);
+    }catch(e){
+        res.status(500).json(e);
+    }
+});
 
 
 
