@@ -28,6 +28,27 @@ router.put("/:id", async(req,res)=>{
     
 });
 
+//delete
+router.delete("/:id", async(req,res)=>{
+    if(req.body.userId == req.params.id){
+
+        try{
+            const updatesUser = await User.findByIdAndUpdate(req.params.id,{
+                $set: req.body,
+            },{new:true});
+            res.status(200).json(updatesUser);
+
+        } catch(e){
+            res.status(500).json(e);
+        }
+    }
+    else{
+        res.status(401).json("You can delete only your account");
+    }
+    
+});
+
+
 
 
 module.exports = router;
