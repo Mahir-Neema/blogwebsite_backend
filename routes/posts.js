@@ -7,8 +7,8 @@ const Post = require("../models/Post");
 router.post("/", async(req,res)=>{
     const newPost = new Post(req.body);
     try{
-        const savePost = newPost.save();
-        res.status(200).json(savePost);
+        const savedPost = newPost.save();
+        res.status(200).json(savedPost);
     }catch(e){
         res.status(500).json(e);
     }
