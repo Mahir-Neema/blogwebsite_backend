@@ -11,6 +11,7 @@ function Topbar() {
         <span className='topIcon'><FaGithubSquare/></span>
         <span className='topIcon'><FaInstagramSquare/></span>
       </div>
+
       <div className="topCenter">
         <ul className="topList">
           <li className="topListitem">HOME</li>
@@ -20,6 +21,7 @@ function Topbar() {
           <li className="topListitem">LOGOUT</li>
         </ul>
       </div>
+      
       <div className="topRight">
         <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="pp image" className='ppimage'/>
         <span className='topsearch'><FaSearch/></span>
