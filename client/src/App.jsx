@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import Topbar from './Topbar/Topbar'
+import Header from './Header/Header'
+import Home from './Pages/Home'
 
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
   return (
     <>
       <Topbar/>
+      <Home/>
     </>
   )
 }
