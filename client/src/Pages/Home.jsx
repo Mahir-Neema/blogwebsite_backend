@@ -1,15 +1,18 @@
-import Header from '../Header/Header';
-import './Home.css';
+import Header from "../Header/Header";
+import Posts from "../Posts/Posts";
+import Sidebar from "../Sidebar/Sidebar";
+import "./Home.css";
 
 function Home() {
   return (
     <>
-        <div className="home">
-            <Header/>
-            homepage
-        </div>
+      <Header />
+      <div className="home">
+        <Posts/>
+        <Sidebar/>
+      </div>
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
